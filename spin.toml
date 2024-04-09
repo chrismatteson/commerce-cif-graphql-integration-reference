@@ -1,0 +1,18 @@
+spin_manifest_version = 2
+
+[application]
+authors = ["Chris Matteson <chris.matteson@gmail.com>"]
+description = ""
+name = "commerce-cif-graphql-integration-reference"
+version = "0.1.0"
+
+[[trigger.http]]
+route = "/..."
+component = "commerce-cif-graphql-integration-reference"
+
+[component.commerce-cif-graphql-integration-reference]
+source = "target/commerce-cif-graphql-integration-reference.wasm"
+exclude_files = ["**/node_modules"]
+[component.commerce-cif-graphql-integration-reference.build]
+command = "npm run build"
+watch = ["src/**/*.js", "package.json"]
