@@ -58,5 +58,3 @@ export async function handleRequest(request) {
 
 // Insert existing OpenWhisk function here
 import { main } from '../actions/local/dispatcher.js';
-
-main(params);
